@@ -1,0 +1,11 @@
+==================================================
+PointNet OpenVINO Inference Demo
+==================================================
+[1/3] Model loaded
+[2/3] Input prepared: shape=(1, 9, 4096)
+[3/3] Inference done
+Output shape: (1, 4096, 13)
+Pred label shape: (1, 4096)
+First point label: 1
+==================================================
+Demo finished

@@ -1,0 +1,4 @@
+
+[submodule "export_pointnet/PointNet"]
+	path = export_pointnet/PointNet
+	url = https://github.com/yanx27/Pointnet_Pointnet2_pytorch.git

@@ -1,0 +1,71 @@
+[Step 1/11] Parsing and validating input arguments
+[ INFO ] Parsing input parameters
+[Step 2/11] Loading OpenVINO Runtime
+[ INFO ] OpenVINO:
+[ INFO ] Build ................................. 2025.4.0-20398-7a975177ff4-releases/2025/4
+[ INFO ] 
+[ INFO ] Device info:
+[ INFO ] GPU
+[ INFO ] Build ................................. 2025.4.0-20398-7a975177ff4-releases/2025/4
+[ INFO ] 
+[ INFO ] 
+[Step 3/11] Setting device configuration
+[Step 4/11] Reading model files
+[ INFO ] Loading model files
+[ INFO ] Read model took 0.00 ms
+[ INFO ] Original model I/O parameters:
+[ INFO ] Model inputs:
+[ INFO ]     x (node: x) : f32 / [...] / [1,9,4096]
+[ INFO ] Model outputs:
+[ INFO ]     ***NO_NAME*** (node: __module.model/aten::view/Reshape_1) : f32 / [...] / [1,4096,13]
+[Step 5/11] Resizing model to match image sizes and given batch
+[ INFO ] Model batch size: 1
+[Step 6/11] Configuring input of the model
+[ INFO ] Model inputs:
+[ INFO ]     x (node: x) : f32 / [C,H,W] / [1,9,4096]
+[ INFO ] Model outputs:
+[ INFO ]     ***NO_NAME*** (node: __module.model/aten::view/Reshape_1) : f32 / [...] / [1,4096,13]
+[Step 7/11] Loading the model to the device
+[ INFO ] Compile model took 203.80 ms
+[Step 8/11] Querying optimal runtime parameters
+[ INFO ] Model:
+[ INFO ]   NETWORK_NAME: Model0
+[ INFO ]   OPTIMAL_NUMBER_OF_INFER_REQUESTS: 1
+[ INFO ]   PERF_COUNT: False
+[ INFO ]   ENABLE_CPU_PINNING: False
+[ INFO ]   ENABLE_CPU_RESERVATION: False
+[ INFO ]   MODEL_PRIORITY: Priority.MEDIUM
+[ INFO ]   GPU_HOST_TASK_PRIORITY: Priority.MEDIUM
+[ INFO ]   GPU_QUEUE_PRIORITY: Priority.MEDIUM
+[ INFO ]   GPU_QUEUE_THROTTLE: Priority.MEDIUM
+[ INFO ]   GPU_ENABLE_LOOP_UNROLLING: True
+[ INFO ]   GPU_DISABLE_WINOGRAD_CONVOLUTION: False
+[ INFO ]   CACHE_DIR: 
+[ INFO ]   CACHE_MODE: CacheMode.OPTIMIZE_SPEED
+[ INFO ]   PERFORMANCE_HINT: PerformanceMode.LATENCY
+[ INFO ]   EXECUTION_MODE_HINT: ExecutionMode.PERFORMANCE
+[ INFO ]   COMPILATION_NUM_THREADS: 16
+[ INFO ]   NUM_STREAMS: 1
+[ INFO ]   PERFORMANCE_HINT_NUM_REQUESTS: 0
+[ INFO ]   INFERENCE_PRECISION_HINT: <Type: 'float16'>
+[ INFO ]   DYNAMIC_QUANTIZATION_GROUP_SIZE: 18446744073709551615
+[ INFO ]   ACTIVATIONS_SCALE_FACTOR: -1.0
+[ INFO ]   KV_CACHE_PRECISION: <Type: 'float16'>
+[ INFO ]   DEVICE_ID: 0
+[ INFO ]   EXECUTION_DEVICES: ['GPU.0']
+[Step 9/11] Creating infer requests and preparing input tensors
+[ WARNING ] No input files were given for input 'x'!. This input will be filled with random values!
+[ INFO ] Fill input 'x' with random values 
+[Step 10/11] Measuring performance (Start inference synchronously, limits: 60000 ms duration)
+[ INFO ] Benchmarking in inference only mode (inputs filling are not included in measurement loop).
+[ INFO ] First inference took 2.91 ms
+[Step 11/11] Dumping statistics report
+[ INFO ] Execution Devices:['GPU.0']
+[ INFO ] Count:            33535 iterations
+[ INFO ] Duration:         60000.99 ms
+[ INFO ] Latency:
+[ INFO ]    Median:        1.76 ms
+[ INFO ]    Average:       1.77 ms
+[ INFO ]    Min:           1.75 ms
+[ INFO ]    Max:           7.63 ms
+[ INFO ] Throughput:   558.91 FPS

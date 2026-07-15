@@ -1,0 +1,72 @@
+[Step 1/11] Parsing and validating input arguments
+[ INFO ] Parsing input parameters
+[Step 2/11] Loading OpenVINO Runtime
+[ INFO ] OpenVINO:
+[ INFO ] Build ................................. 2025.4.0-20398-7a975177ff4-releases/2025/4
+[ INFO ] 
+[ INFO ] Device info:
+[ INFO ] CPU
+[ INFO ] Build ................................. 2025.4.0-20398-7a975177ff4-releases/2025/4
+[ INFO ] 
+[ INFO ] 
+[Step 3/11] Setting device configuration
+[Step 4/11] Reading model files
+[ INFO ] Loading model files
+[ INFO ] Read model took 0.00 ms
+[ INFO ] Original model I/O parameters:
+[ INFO ] Model inputs:
+[ INFO ]     x (node: x) : f32 / [...] / [1,9,4096]
+[ INFO ] Model outputs:
+[ INFO ]     ***NO_NAME*** (node: __module.model/aten::view/Reshape_1) : f32 / [...] / [1,4096,13]
+[Step 5/11] Resizing model to match image sizes and given batch
+[ INFO ] Model batch size: 1
+[Step 6/11] Configuring input of the model
+[ INFO ] Model inputs:
+[ INFO ]     x (node: x) : f32 / [C,H,W] / [1,9,4096]
+[ INFO ] Model outputs:
+[ INFO ]     ***NO_NAME*** (node: __module.model/aten::view/Reshape_1) : f32 / [...] / [1,4096,13]
+[Step 7/11] Loading the model to the device
+[ INFO ] Compile model took 68.22 ms
+[Step 8/11] Querying optimal runtime parameters
+[ INFO ] Model:
+[ INFO ]   NETWORK_NAME: Model0
+[ INFO ]   OPTIMAL_NUMBER_OF_INFER_REQUESTS: 1
+[ INFO ]   NUM_STREAMS: 1
+[ INFO ]   INFERENCE_NUM_THREADS: 14
+[ INFO ]   PERF_COUNT: NO
+[ INFO ]   INFERENCE_PRECISION_HINT: <Type: 'float32'>
+[ INFO ]   PERFORMANCE_HINT: LATENCY
+[ INFO ]   EXECUTION_MODE_HINT: ExecutionMode.PERFORMANCE
+[ INFO ]   PERFORMANCE_HINT_NUM_REQUESTS: 0
+[ INFO ]   ENABLE_CPU_PINNING: False
+[ INFO ]   ENABLE_CPU_RESERVATION: False
+[ INFO ]   SCHEDULING_CORE_TYPE: SchedulingCoreType.ANY_CORE
+[ INFO ]   MODEL_DISTRIBUTION_POLICY: set()
+[ INFO ]   ENABLE_HYPER_THREADING: False
+[ INFO ]   EXECUTION_DEVICES: ['CPU']
+[ INFO ]   CPU_DENORMALS_OPTIMIZATION: False
+[ INFO ]   LOG_LEVEL: Level.NO
+[ INFO ]   CPU_SPARSE_WEIGHTS_DECOMPRESSION_RATE: 1.0
+[ INFO ]   ENABLE_TENSOR_PARALLEL: False
+[ INFO ]   DYNAMIC_QUANTIZATION_GROUP_SIZE: 32
+[ INFO ]   KV_CACHE_PRECISION: <Type: 'uint8_t'>
+[ INFO ]   KEY_CACHE_PRECISION: <Type: 'uint8_t'>
+[ INFO ]   VALUE_CACHE_PRECISION: <Type: 'uint8_t'>
+[ INFO ]   KEY_CACHE_GROUP_SIZE: 0
+[ INFO ]   VALUE_CACHE_GROUP_SIZE: 0
+[Step 9/11] Creating infer requests and preparing input tensors
+[ WARNING ] No input files were given for input 'x'!. This input will be filled with random values!
+[ INFO ] Fill input 'x' with random values 
+[Step 10/11] Measuring performance (Start inference synchronously, limits: 60000 ms duration)
+[ INFO ] Benchmarking in inference only mode (inputs filling are not included in measurement loop).
+[ INFO ] First inference took 20.05 ms
+[Step 11/11] Dumping statistics report
+[ INFO ] Execution Devices:['CPU']
+[ INFO ] Count:            4521 iterations
+[ INFO ] Duration:         60001.82 ms
+[ INFO ] Latency:
+[ INFO ]    Median:        12.97 ms
+[ INFO ]    Average:       13.18 ms
+[ INFO ]    Min:           10.14 ms
+[ INFO ]    Max:           17.73 ms
+[ INFO ] Throughput:   75.35 FPS
