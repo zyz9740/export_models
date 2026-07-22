@@ -1,0 +1,42 @@
+Hierarchy Level	Metric Name	Metric Value
+0	Elapsed Time	70.865189
+1	GPU Time	55.638640
+0	XVE Array Stalled/Idle	84.1
+1	GPU L3 Bandwidth Bound	5.9
+2	Hottest GPU Computing Tasks Bound by GPU L3 Bandwidth	
+2	Computing Task	Total Time
+1	Occupancy	36.9
+2	Hottest GPU Computing Tasks with Low Occupancy	
+2	Computing Task	Total Time	SIMD Width	Peak XVE Threads Occupancy(%)	Occupancy(%)	SIMD Utilization(%)
+2	sdpa_micro__prefill_9410584702832551303	15.197858	8	27.4	42.9	100.0
+2	gemm_kernel	6.730891	8	100.0	39.6	100.0
+2	gemm_kernel	6.683507	8	100.0	35.8	100.0
+2	[Others]	21.114567	N/A	0.0	43.3	0.0
+0	Collection and Platform Info	
+1	Application Command Line	benchmark_app "-m" "export_lingbot_depth\converter\lingbot_depth.xml" "-d" "GPU" "-hint" "latency" "-infer_precision" "f16" "-niter" "50" 
+1	Operating System	Microsoft Windows 10
+1	Computer Name	DESKTOP-98GRB7D
+1	Result Size	731409049
+1	Collection start time	08:46:10 14/07/2026 UTC
+1	Collection stop time	08:47:21 14/07/2026 UTC
+1	Collector Type	Event-based sampling driver,User-mode sampling and tracing
+1	CPU	
+2	Name	Intel(R) microarchitecture code named Arrowlake-H
+2	Frequency	3686402288
+2	Logical CPU Count	16
+1	GPU	
+2	Name	Intel(R) Arc(TM) 140T GPU (16GB)
+2	Vendor	Intel Corporation
+2	Driver	32.0.101.8801
+2	XVE Count	128
+2	Max XVE Thread Count	8
+2	Max Core Frequency	2300000000
+2	GPU OpenCL Info	
+3	Version	OpenCL 3.0 NEO 
+3	Max Compute Units	128
+3	Max Work Group Size	1024
+3	Local Memory	65536
+3	SVM Capabilities	
+0	Recommendations:
+1	GPU Time, % of Elapsed time	78.5	GPU utilization is low. Switch to the for in-depth analysis of host activity. Poor GPU utilization can prevent the application from offloading effectively.
+1	XVE Array Stalled/Idle	84.1 of Elapsed time with GPU busy	GPU metrics detect some kernel issues. Use GPU Compute/Media Hotspots (preview) to understand how well your application runs on the specified hardware.

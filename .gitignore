@@ -14,7 +14,7 @@
 # KPConv deformable 自动落地的 kernel 缓存
 **/kernels/dispositions/
 
-# IR 产物（GitHub Release 分发，本地运行 convert.py 可再生）
+# IR 产物（本地运行 convert.py 可再生）
 **/converter/*.xml
 **/converter/*.bin
 **/converter/*.onnx

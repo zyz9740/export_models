@@ -2,3 +2,6 @@
 [submodule "export_pointnet/PointNet"]
 	path = export_pointnet/PointNet
 	url = https://github.com/yanx27/Pointnet_Pointnet2_pytorch.git
+[submodule "export_lingbot_depth/lingbot-depth"]
+	path = export_lingbot_depth/lingbot-depth
+	url = https://github.com/Robbyant/lingbot-depth.git
